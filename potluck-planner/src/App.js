@@ -2,14 +2,18 @@ import "./App.css";
 
 import { Link, Route, Switch } from "react-router-dom";
 
-import Home from "./components/Home";
+import Events from "./components/Events";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   return (
     <div className="App">
       <nav>
+        <div>
+          <Link to="/register">Sign Up</Link>
+        </div>
         <div>
           <Link to="/login">Login</Link>
         </div>
@@ -18,7 +22,8 @@ function App() {
         </div>
       </nav>
       <Switch>
-        <Route path="/home" component={Home} />
+        <Route path="/register" component={Register} />
+        <Route path="/events" component={Events} />
         <Route path="/login" component={Login} />
         <Route exact path="/" component={LandingPage} />
       </Switch>

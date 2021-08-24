@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import NewPotluck from "./NewPotluck";
 import PotluckList from "./PotluckList";
 
-const Home = () => {
+const Events = () => {
   const [displayPotlucks, setDisplayPotlucks] = useState(true);
 
   const handleClick = () => {
@@ -29,4 +29,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Events;

@@ -6,7 +6,8 @@ const initialFormValues = {
   username: "",
   password: "",
 };
-const Login = (props) => {
+
+const Register = () => {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const handleChanges = (e) => {
@@ -35,7 +36,7 @@ const Login = (props) => {
     <div>
       <label>
         {" "}
-        Login:
+        Sign-up:
         <form onSubmit={handleSubmit}>
           <input
             name="username"
@@ -58,4 +59,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default Register;
