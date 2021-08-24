@@ -48,3 +48,13 @@
   width: 10%;
   height: 7vh;
 }
+
+.potluckForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.potluckForm button {
+  width: 7%;
+}
