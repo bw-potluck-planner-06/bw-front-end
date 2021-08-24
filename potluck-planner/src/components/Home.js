@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import styled from "styled-components";
 import NewPotluck from "./NewPotluck";
 import PotluckList from "./PotluckList";
 
@@ -10,11 +10,17 @@ const Home = () => {
     setDisplayPotlucks(!displayPotlucks);
   };
 
+const Button = styled.button`
+background-color: #97e092;
+border-radius: 3px;
+font-size: 30px;
+`
+
   return (
     <div className="homeContainer">
-      <button onClick={handleClick}>
+      <Button onClick={handleClick}>
         {displayPotlucks ? "Organize New Potluck!" : "Show Current Potlucks"}
-      </button>
+      </Button>
       <div>
         {displayPotlucks ? (
           <PotluckList />
