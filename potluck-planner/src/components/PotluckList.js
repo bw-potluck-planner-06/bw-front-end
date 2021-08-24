@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 
 const PotluckList = (props) => {
-  console.log(props);
   return (
     <div>
       {props.potlucks.map((obj) => {

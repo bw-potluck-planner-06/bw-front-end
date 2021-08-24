@@ -24,13 +24,11 @@ const NewPotluck = ({ setDisplayPotlucks, displayPotlucks, addPotluck }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("this works cool");
     addPotluck(formValues);
     setFormValues(initialFormValues);
     setDisplayPotlucks(!displayPotlucks);
   };
 
-  console.log(formValues);
   return (
     <div>
       <label>
