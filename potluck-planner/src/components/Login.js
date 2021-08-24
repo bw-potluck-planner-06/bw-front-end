@@ -5,7 +5,7 @@ const initialFormValues = {
   password: "",
   email: "",
 };
-const Login = () => {
+const Login = (props) => {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const handleChanges = (e) => {
@@ -16,12 +16,10 @@ const Login = () => {
     });
   };
 
-  console.log(formValues);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("yo");
     setFormValues(initialFormValues);
+    props.history.push("/home");
   };
 
   return (
