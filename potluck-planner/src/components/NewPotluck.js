@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import { addPotluck } from "../actions";
+import { connect } from "react-redux";
+
 const initialFormValues = {
   img: "",
   title: "",
@@ -8,7 +11,7 @@ const initialFormValues = {
   description: "",
 };
 
-const NewPotluck = ({ setDisplayPotlucks, displayPotlucks }) => {
+const NewPotluck = ({ setDisplayPotlucks, displayPotlucks, addPotluck }) => {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const handleChanges = (e) => {
@@ -22,6 +25,7 @@ const NewPotluck = ({ setDisplayPotlucks, displayPotlucks }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("this works cool");
+    addPotluck(formValues);
     setFormValues(initialFormValues);
     setDisplayPotlucks(!displayPotlucks);
   };
@@ -84,4 +88,4 @@ const NewPotluck = ({ setDisplayPotlucks, displayPotlucks }) => {
   );
 };
 
-export default NewPotluck;
+export default connect(null, { addPotluck })(NewPotluck);

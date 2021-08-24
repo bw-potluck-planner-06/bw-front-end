@@ -7,7 +7,6 @@ const Home = () => {
   const [displayPotlucks, setDisplayPotlucks] = useState(true);
 
   const handleClick = () => {
-    // console.log("yo");
     setDisplayPotlucks(!displayPotlucks);
   };
 
