@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import NewPotluck from "./NewPotluck";
 import PotluckList from "./PotluckList";
+import "./Home.css"
+
 
 const Home = () => {
   const [displayPotlucks, setDisplayPotlucks] = useState(true);

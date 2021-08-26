@@ -1,4 +1,12 @@
 import React from "react";
+import styled from "styled-components";
+
+const CheckItOut = styled.button`
+background-color: #97e092;
+border-radius: 3px;
+font-size: 20px;
+`
+
 
 const PotluckCard = ({ data }) => {
   return (
@@ -14,7 +22,7 @@ const PotluckCard = ({ data }) => {
         </p>
         <p>{data.description}</p>
       </div>
-      <button className="potluckBtn">Check It Out!</button>
+      <CheckItOut className="potluckBtn">Check It Out!</CheckItOut>
     </div>
   );
 };
