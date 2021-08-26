@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Loading from "./Loading";
 
 import axios from "axios";
 
@@ -19,16 +20,16 @@ const Login = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("https://back-end-pp06.herokuapp.com/api/users", formValues)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // axios
+    //   .post("https://back-end-pp06.herokuapp.com/api/users", formValues)
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
 
-    // props.history.push("/home");
+    props.history.push("/events");
   };
 
   return (

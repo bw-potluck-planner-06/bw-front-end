@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import NewPotluck from "./NewPotluck";
 import PotluckList from "./PotluckList";
 
-const Events = () => {
+const Events = (props) => {
   const [displayPotlucks, setDisplayPotlucks] = useState(true);
+  console.log(props);
 
   const handleClick = () => {
     setDisplayPotlucks(!displayPotlucks);
@@ -17,7 +18,7 @@ const Events = () => {
       </button>
       <div>
         {displayPotlucks ? (
-          <PotluckList />
+          <PotluckList push={props.history.push} />
         ) : (
           <NewPotluck
             setDisplayPotlucks={setDisplayPotlucks}

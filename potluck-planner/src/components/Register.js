@@ -7,7 +7,7 @@ const initialFormValues = {
   password: "",
 };
 
-const Register = () => {
+const Register = (props) => {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const handleChanges = (e) => {
@@ -29,7 +29,7 @@ const Register = () => {
         console.log(err);
       });
 
-    // props.history.push("/home");
+    props.history.push("/events");
   };
 
   return (

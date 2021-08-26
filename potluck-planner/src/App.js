@@ -4,8 +4,10 @@ import { Link, Route, Switch } from "react-router-dom";
 
 import Events from "./components/Events";
 import LandingPage from "./components/LandingPage";
+import Loading from "./components/Loading";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import SelectedPotluck from "./components/SelectedPotluck";
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         </div>
       </nav>
       <Switch>
+        <Route path="/events/:id" component={SelectedPotluck} />
         <Route path="/register" component={Register} />
         <Route path="/events" component={Events} />
         <Route path="/login" component={Login} />
