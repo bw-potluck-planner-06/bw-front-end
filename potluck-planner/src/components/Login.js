@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import ButtonLogin from "./Button";
 import axios from "axios";
 
 const initialFormValues = {
@@ -19,16 +20,17 @@ const Login = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("https://back-end-pp06.herokuapp.com/api/users", formValues)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-    // props.history.push("/home");
+    // axios
+    //   .post("https://back-end-pp06.herokuapp.com/api/users", formValues)
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    setTimeout(() => {
+      props.history.push("/events");
+    }, 2000);
   };
 
   return (
@@ -51,7 +53,7 @@ const Login = (props) => {
             onChange={handleChanges}
             placeholder="Password"
           />
-          <button type="submit">Submit</button>
+          <ButtonLogin submit={handleSubmit} />
         </form>
       </label>
     </div>
