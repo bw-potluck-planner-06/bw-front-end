@@ -1,6 +1,11 @@
 import React from "react";
 
-const PotluckCard = ({ data }) => {
+const PotluckCard = (props) => {
+  const { data } = props;
+  const handleClick = () => {
+    props.push(`/events/${data.id}`);
+  };
+
   return (
     <div className="potluckCard">
       <img src={data.img} alt="potluck" />
@@ -14,7 +19,9 @@ const PotluckCard = ({ data }) => {
         </p>
         <p>{data.description}</p>
       </div>
-      <button className="potluckBtn">Check It Out!</button>
+      <button className="potluckBtn" onClick={handleClick}>
+        Check It Out!
+      </button>
     </div>
   );
 };

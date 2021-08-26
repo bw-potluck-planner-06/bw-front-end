@@ -4,8 +4,10 @@ import { Link, Route, Switch } from "react-router-dom";
 import ButtonLogin from "./components/Button";
 import Events from "./components/Events";
 import LandingPage from "./components/LandingPage";
+import Loading from "./components/Loading";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import SelectedPotluck from "./components/SelectedPotluck";
 
 function App() {
   return (
@@ -21,16 +23,13 @@ function App() {
           <Link to="/">Logout</Link>
         </div>
       </nav>
-
-      <div className="Cards">
-        <Switch>
-          <Route path="/button" component={ButtonLogin} />
-          <Route path="/register" component={Register} />
-          <Route path="/events" component={Events} />
-          <Route path="/login" component={Login} />
-          <Route exact path="/" component={LandingPage} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/events/:id" component={SelectedPotluck} />
+        <Route path="/register" component={Register} />
+        <Route path="/events" component={Events} />
+        <Route path="/login" component={Login} />
+        <Route exact path="/" component={LandingPage} />
+      </Switch>
       {/* <header className="App-header">
         <h1>This is the Potluck Planner App! Welcome!</h1>
       </header> */}

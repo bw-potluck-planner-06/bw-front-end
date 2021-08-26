@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Loading from "./Loading";
 
 import ButtonLogin from "./Button";
 import axios from "axios";
@@ -28,9 +29,8 @@ const Login = (props) => {
     //   .catch((err) => {
     //     console.log(err);
     //   });
-    setTimeout(() => {
-      props.history.push("/events");
-    }, 2000);
+
+    props.history.push("/events");
   };
 
   return (

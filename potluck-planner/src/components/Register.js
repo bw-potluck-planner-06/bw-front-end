@@ -19,15 +19,15 @@ const Register = (props) => {
   };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
-    // axios
-    //   .post("https://back-end-pp06.herokuapp.com/api/users", formValues)
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    e.preventDefault();
+    axios
+      .post("https://back-end-pp06.herokuapp.com/api/users", formValues)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     props.history.push("/events");
   };
