@@ -2,7 +2,6 @@ import "./Login.css";
 
 import React, { useState } from "react";
 
-import ButtonLogin from "./Button";
 import { addPotluck } from "../actions";
 import { connect } from "react-redux";
 
