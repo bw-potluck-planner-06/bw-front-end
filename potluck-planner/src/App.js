@@ -19,15 +19,15 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" className="landingBackground">
       <nav>
-        <div>
+        <div className="actualBtn">
           <Link to="/register">Sign Up</Link>
         </div>
-        <div>
+        <div className="actualBtn">
           <Link to="/login">Login</Link>
         </div>
-        <div>
+        <div className="actualBtn">
           <Link onClick={logout}>Logout</Link>
         </div>
       </nav>
