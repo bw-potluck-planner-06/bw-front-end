@@ -5,6 +5,10 @@ body {
   text-align: center;
 }
 
+body {
+  background-color: #26324b;
+}
+
 .spinner {
   position: absolute;
   display: flex;
@@ -44,10 +48,18 @@ body {
   color: #61dafb;
 }
 
+.events {
+  background-color: #26324b;
+}
+
 .potluckCard {
+  background-color: #fec872;
   display: flex;
   justify-content: space-between;
   margin: 1rem;
+  border: 5px solid #fca311;
+  border-radius: 0.5rem;
+  color: #282c34;
 }
 
 .potluckCardTextContent {
@@ -61,14 +73,26 @@ body {
 }
 
 .potluckBtn {
-  width: 10%;
+  margin-top: 13.5rem;
+  width: 15%;
   height: 7vh;
+  background-color: #e5e5e5;
+  text-decoration: none;
+  color: #14213d;
+  padding: 1rem 3rem;
+  border-radius: 0.5em;
+  border: 2px solid #14213d;
 }
 
-.potluckForm {
+.selectedPotluck {
+  margin: 2rem 1rem;
+  background-color: #fec872;
+}
+
+.selectedTextContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 50%;
 }
 
 .potluckForm button {

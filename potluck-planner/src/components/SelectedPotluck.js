@@ -10,8 +10,8 @@ const SelectedPotluck = (props) => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="selectedPotluck">
+      <div className="selectedTextContent">
         <h1>{props.potlucks[id].title}</h1>
         <h3>{props.potlucks[id].date}</h3>
         <p>{props.potlucks[id].location}</p>
