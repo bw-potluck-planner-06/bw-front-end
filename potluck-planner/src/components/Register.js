@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./Login.css";
 import axios from "axios";
 
 const initialFormValues = {
@@ -33,11 +33,10 @@ const Register = (props) => {
   };
 
   return (
-    <div>
-      <label>
-        {" "}
-        Sign-up:
-        <form onSubmit={handleSubmit}>
+    <div class="loginSection">
+      <label class="label">
+        <form onSubmit={handleSubmit} class="form">
+          Sign-up:
           <input
             name="username"
             type="text"
@@ -52,7 +51,9 @@ const Register = (props) => {
             onChange={handleChanges}
             placeholder="Password"
           />
-          <button type="submit">Submit</button>
+          <button type="submit" class="button">
+            Submit
+          </button>
         </form>
       </label>
     </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ButtonLogin from "./Button";
 import axios from "axios";
+import "./Login.css";
 
 const initialFormValues = {
   username: "",
@@ -41,10 +42,9 @@ const Login = (props) => {
 
   return (
     <div class="loginSection">
-      <label>
-        {" "}
-        Login:
+      <label class="label">
         <form onSubmit={handleSubmit} class="form">
+          Login:
           <input
             name="username"
             type="text"
