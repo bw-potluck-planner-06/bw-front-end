@@ -4,12 +4,20 @@ import { Link, Route, Switch } from "react-router-dom";
 import ButtonLogin from "./components/Button";
 import Events from "./components/Events";
 import LandingPage from "./components/LandingPage";
-import Loading from "./components/Loading";
 import Login from "./components/Login";
+import PrivateRoute from "./components/PrivateRoute";
 import Register from "./components/Register";
 import SelectedPotluck from "./components/SelectedPotluck";
+import axios from "axios";
+
+// import Loading from "./components/Loading";
 
 function App() {
+  const logout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/login";
+  };
+
   return (
     <div className="App">
       <nav>
@@ -20,13 +28,13 @@ function App() {
           <Link to="/login">Login</Link>
         </div>
         <div>
-          <Link to="/">Logout</Link>
+          <Link onClick={logout}>Logout</Link>
         </div>
       </nav>
       <Switch>
-        <Route path="/events/:id" component={SelectedPotluck} />
+        <PrivateRoute path="/events/:id" component={SelectedPotluck} />
         <Route path="/register" component={Register} />
-        <Route path="/events" component={Events} />
+        <PrivateRoute path="/events" component={Events} />
         <Route path="/login" component={Login} />
         <Route exact path="/" component={LandingPage} />
       </Switch>

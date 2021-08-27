@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Loading from "./Loading";
 
 import ButtonLogin from "./Button";
 import axios from "axios";
@@ -21,14 +20,22 @@ const Login = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // axios
-    //   .post("https://back-end-pp06.herokuapp.com/api/users", formValues)
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    axios
+      .get("https://back-end-pp06.herokuapp.com/api/users")
+      .then((res) => {
+        // fake login
+        const user = res.data.filter((user) => {
+          return (
+            user.username === formValues.username &&
+            user.password === formValues.password
+          );
+        });
+        localStorage.setItem("token", user[0].updated_at);
+        props.history.push("/events");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     props.history.push("/events");
   };

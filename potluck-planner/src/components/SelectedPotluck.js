@@ -1,22 +1,31 @@
 import React from "react";
+import { connect } from "react-redux";
+import { useParams } from "react-router-dom";
 
-const SelectedPotluck = () => {
+const SelectedPotluck = (props) => {
+  const { id } = useParams();
+
+  const handleClick = () => {
+    props.history.push("/events");
+  };
+
   return (
     <div>
-      <h1>Title</h1>
-      <h3>Mar 07, 2022</h3>
-      <p>1111 Ut maiores</p>
-      <p>
-        Occaecat nostrud amet laboris adipisicing laboris culpa. Ut minim
-        occaecat non dolore est do nostrud exercitation non. Sint deserunt
-        aliquip enim mollit magna velit nisi nulla consectetur. Sunt nisi
-        deserunt eiusmod mollit. Culpa qui esse amet est nisi ad dolor nisi
-        proident ipsum sunt quis dolor. Magna nostrud incididunt culpa in
-        pariatur mollit eiusmod consectetur nisi cillum et. Est pariatur irure
-        id incididunt voluptate.
-      </p>
+      <div>
+        <h1>{props.potlucks[id].title}</h1>
+        <h3>{props.potlucks[id].date}</h3>
+        <p>{props.potlucks[id].location}</p>
+        <p>{props.potlucks[id].description}</p>
+      </div>
+      <button onClick={handleClick}>Go Back</button>
     </div>
   );
 };
 
-export default SelectedPotluck;
+const mapStateToProps = (state) => {
+  return {
+    potlucks: state.potlucks,
+  };
+};
+
+export default connect(mapStateToProps)(SelectedPotluck);
