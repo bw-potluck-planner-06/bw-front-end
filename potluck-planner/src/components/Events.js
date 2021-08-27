@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+
 import NewPotluck from "./NewPotluck";
 import PotluckList from "./PotluckList";
-import "./Home.css"
-
+import styled from "styled-components";
 
 const Events = (props) => {
   const [displayPotlucks, setDisplayPotlucks] = useState(true);
@@ -12,14 +11,19 @@ const Events = (props) => {
     setDisplayPotlucks(!displayPotlucks);
   };
 
-const Button = styled.button`
-background-color: #97e092;
-border-radius: 3px;
-font-size: 30px;
-`
+  const Button = styled.button`
+    background-color: #e5e5e5;
+    border-radius: 0.5em;
+    font-size: 1.3rem;
+    color: #14213d;
+    margin: 2rem 0 1rem;
+    padding: 1rem 3rem;
+    border: 2px solid #14213d;
+    transition: background 200ms ease-in, color 200ms ease-in;
+  `;
 
   return (
-    <div className="homeContainer">
+    <div className="events">
       <Button onClick={handleClick}>
         {displayPotlucks ? "Organize New Potluck!" : "Show Current Potlucks"}
       </Button>

@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const PotluckList = (props) => {
   return (
-    <div>
+    <div className="potluckList">
       {props.potlucks.map((obj) => {
         return <PotluckCard data={obj} key={uuidv4()} push={props.push} />;
       })}
