@@ -8,7 +8,6 @@ import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Register from "./components/Register";
 import SelectedPotluck from "./components/SelectedPotluck";
-import axios from "axios";
 
 // import Loading from "./components/Loading";
 
