@@ -1,8 +1,9 @@
 import React from "react";
 
+
 const LandingPage = () => {
   return (
-    <div>
+    <div class = "landingDiv">
       <h1>Welcome To Potluck Planner!!</h1>
       <h3>Your source for all things potluck</h3>
       <p>
