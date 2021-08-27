@@ -76,23 +76,72 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #97e092;
-  border-radius: 10%;
-  padding-top:3%;
+  background-color: #26324b;
+  padding-top: 3%;
   padding-bottom: 3%;
 }
 
 .landingDiv p {
   text-align: left;
-  max-width: 80%;
-  font-size: 20px;
+  max-width: 95%;
+  font-size: 1rem;
+  background-color: #fec872;
+  color: #14213d;
+  margin: 3 auto;
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 8px solid #fca311;
+  border-radius: 0.5rem;
 }
 
 .landingDiv h1 {
-  font-size: 50px;
+  font-size: 3rem;
+  background-color: #fec872;
+  color: #14213d;
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 8px solid #fca311;
+  border-radius: 0.5rem;
 }
 
 .landingDiv h3 {
   margin-top: 0;
-  font-size: 30px;
+  font-size: 1.5rem;
+  background-color: #fec872;
+  color: #14213d;
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 8px solid #fca311;
+  border-radius: 0.5rem;
+}
+
+.landingBackground nav {
+  background-color: #adadae;
+  display: flex;
+  justify-content: space-evenly;
+  height: 8vh;
+  align-items: center;
+  margin-bottom: auto;
+}
+
+.actualBtn a {
+  background-color: #e5e5e5;
+  text-align: center;
+  text-decoration: none;
+  color: #14213d;
+  padding: 1rem 3rem;
+  border-radius: 0.5em;
+  font-size: 1.3rem;
+  border: 2px solid #14213d;
+  transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.actualBtn a:hover {
+  background-color: #fca311;
+  color: #14213d;
+  transform: scale(1.02);
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  border: 2px solid #14213d;
+  transition: background 200ms ease-in, color 200ms ease-in;
 }

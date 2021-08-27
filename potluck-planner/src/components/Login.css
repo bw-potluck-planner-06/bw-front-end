@@ -1,0 +1,8 @@
+.loginSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  align-content: center;
+}

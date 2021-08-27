@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { Link, Route, Switch } from "react-router-dom";
-
+import ButtonLogin from "./components/Button";
 import Events from "./components/Events";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
@@ -18,15 +18,15 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" className="landingBackground">
       <nav>
-        <div>
+        <div className="actualBtn">
           <Link to="/register">Sign Up</Link>
         </div>
-        <div>
+        <div className="actualBtn">
           <Link to="/login">Login</Link>
         </div>
-        <div>
+        <div className="actualBtn">
           <Link onClick={logout}>Logout</Link>
         </div>
       </nav>
