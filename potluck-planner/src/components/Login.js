@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import ButtonLogin from "./Button";
 import axios from "axios";
 
 const initialFormValues = {
@@ -40,11 +40,11 @@ const Login = (props) => {
   };
 
   return (
-    <div>
+    <div class="loginSection">
       <label>
         {" "}
         Login:
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} class="form">
           <input
             name="username"
             type="text"
@@ -59,7 +59,7 @@ const Login = (props) => {
             onChange={handleChanges}
             placeholder="Password"
           />
-          <button type="submit">Submit</button>
+          <ButtonLogin submit={handleSubmit} />
         </form>
       </label>
     </div>
