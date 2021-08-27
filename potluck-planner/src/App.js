@@ -1,7 +1,6 @@
 import "./App.css";
 
 import { Link, Route, Switch } from "react-router-dom";
-import ButtonLogin from "./components/Button";
 import Events from "./components/Events";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
