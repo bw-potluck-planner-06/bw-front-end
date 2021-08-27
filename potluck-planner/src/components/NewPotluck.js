@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import { addPotluck } from "../actions";
 import { connect } from "react-redux";
-import { v4 as uuidv4 } from "uuid";
 
 const initialFormState = {
   id: "",
@@ -26,7 +25,7 @@ const NewPotluck = ({
     setFormValues({
       ...formValues,
       [e.target.name]: e.target.value,
-      id: uuidv4(),
+      id: potlucks.length,
     });
   };
 

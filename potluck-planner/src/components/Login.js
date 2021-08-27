@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Loading from "./Loading";
 
 import axios from "axios";
+
+// import Loading from "./Loading";
 
 const initialFormValues = {
   username: "",
@@ -20,14 +21,14 @@ const Login = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // axios
-    //   .post("https://back-end-pp06.herokuapp.com/api/users", formValues)
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    axios
+      .get("https://back-end-pp06.herokuapp.com/api/users")
+      .then((res) => {
+        console.log("login", res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     props.history.push("/events");
   };

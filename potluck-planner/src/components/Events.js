@@ -5,7 +5,6 @@ import PotluckList from "./PotluckList";
 
 const Events = (props) => {
   const [displayPotlucks, setDisplayPotlucks] = useState(true);
-  console.log(props);
 
   const handleClick = () => {
     setDisplayPotlucks(!displayPotlucks);
