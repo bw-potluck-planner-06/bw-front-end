@@ -1,6 +1,7 @@
 import "./App.css";
 
 import { Link, Route, Switch } from "react-router-dom";
+
 import Events from "./components/Events";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
@@ -13,7 +14,7 @@ import SelectedPotluck from "./components/SelectedPotluck";
 function App() {
   const logout = () => {
     localStorage.removeItem("token");
-    window.location.href = "/login";
+    window.location.href = "/";
   };
 
   return (

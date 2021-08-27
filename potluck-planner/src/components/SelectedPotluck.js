@@ -17,7 +17,9 @@ const SelectedPotluck = (props) => {
         <p>{props.potlucks[id].location}</p>
         <p>{props.potlucks[id].description}</p>
       </div>
-      <button onClick={handleClick}>Go Back</button>
+      <button onClick={handleClick} class="button">
+        Go Back
+      </button>
     </div>
   );
 };
