@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className="App" className="landingBackground">
+    <div className="App landingBackground">
       <nav>
         <div className="actualBtn">
           <Link to="/register">Sign Up</Link>
