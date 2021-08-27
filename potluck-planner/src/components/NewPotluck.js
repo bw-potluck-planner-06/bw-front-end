@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { addPotluck } from "../actions";
 import { connect } from "react-redux";
 
-const initialFormValues = {
+const initialFormState = {
+  id: "",
   img: "",
   title: "",
   date: "",
@@ -11,21 +12,27 @@ const initialFormValues = {
   description: "",
 };
 
-const NewPotluck = ({ setDisplayPotlucks, displayPotlucks, addPotluck }) => {
-  const [formValues, setFormValues] = useState(initialFormValues);
+const NewPotluck = ({
+  setDisplayPotlucks,
+  displayPotlucks,
+  addPotluck,
+  potlucks,
+}) => {
+  const [formValues, setFormValues] = useState(initialFormState);
 
   const handleChanges = (e) => {
     e.preventDefault();
     setFormValues({
       ...formValues,
       [e.target.name]: e.target.value,
+      id: potlucks.length,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     addPotluck(formValues);
-    setFormValues(initialFormValues);
+    setFormValues(initialFormState);
     setDisplayPotlucks(!displayPotlucks);
   };
 
@@ -86,4 +93,10 @@ const NewPotluck = ({ setDisplayPotlucks, displayPotlucks, addPotluck }) => {
   );
 };
 
-export default connect(null, { addPotluck })(NewPotluck);
+const mapStateToProps = (state) => {
+  return {
+    potlucks: state.potlucks,
+  };
+};
+
+export default connect(mapStateToProps, { addPotluck })(NewPotluck);

@@ -5,7 +5,7 @@ import PotluckList from "./PotluckList";
 import "./Home.css"
 
 
-const Home = () => {
+const Events = (props) => {
   const [displayPotlucks, setDisplayPotlucks] = useState(true);
 
   const handleClick = () => {
@@ -25,7 +25,7 @@ font-size: 30px;
       </Button>
       <div>
         {displayPotlucks ? (
-          <PotluckList />
+          <PotluckList push={props.history.push} />
         ) : (
           <NewPotluck
             setDisplayPotlucks={setDisplayPotlucks}
@@ -37,4 +37,4 @@ font-size: 30px;
   );
 };
 
-export default Home;
+export default Events;

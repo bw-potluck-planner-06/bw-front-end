@@ -6,7 +6,8 @@ const initialFormValues = {
   username: "",
   password: "",
 };
-const Login = (props) => {
+
+const Register = (props) => {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const handleChanges = (e) => {
@@ -20,17 +21,9 @@ const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .get("https://back-end-pp06.herokuapp.com/api/users")
+      .post("https://back-end-pp06.herokuapp.com/api/users", formValues)
       .then((res) => {
-        // fake login
-        const user = res.data.filter((user) => {
-          return (
-            user.username === formValues.username &&
-            user.password === formValues.password
-          );
-        });
-        localStorage.setItem("token", user[0].updated_at);
-        props.history.push("/events");
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -43,7 +36,7 @@ const Login = (props) => {
     <div>
       <label>
         {" "}
-        Login:
+        Sign-up:
         <form onSubmit={handleSubmit}>
           <input
             name="username"
@@ -66,4 +59,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default Register;

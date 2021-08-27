@@ -7,7 +7,7 @@ const PotluckList = (props) => {
   return (
     <div>
       {props.potlucks.map((obj) => {
-        return <PotluckCard data={obj} key={uuidv4()} />;
+        return <PotluckCard data={obj} key={uuidv4()} push={props.push} />;
       })}
     </div>
   );

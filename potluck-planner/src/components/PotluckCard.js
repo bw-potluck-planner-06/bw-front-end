@@ -2,13 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const CheckItOut = styled.button`
-background-color: #97e092;
-border-radius: 3px;
-font-size: 20px;
-`
+  background-color: #97e092;
+  border-radius: 3px;
+  font-size: 20px;
+`;
 
+const PotluckCard = (props) => {
+  const { data } = props;
+  const handleClick = () => {
+    props.push(`/events/${data.id}`);
+  };
 
-const PotluckCard = ({ data }) => {
   return (
     <div className="potluckCard">
       <img src={data.img} alt="potluck" />
@@ -22,7 +26,9 @@ const PotluckCard = ({ data }) => {
         </p>
         <p>{data.description}</p>
       </div>
-      <CheckItOut className="potluckBtn">Check It Out!</CheckItOut>
+      <CheckItOut className="potluckBtn" onClick={handleClick}>
+        Check It Out!
+      </CheckItOut>
     </div>
   );
 };
