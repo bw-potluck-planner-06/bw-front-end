@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 import axios from "axios";
 
-// import Loading from "./Loading";
-
 const initialFormValues = {
   username: "",
   password: "",
@@ -24,7 +22,15 @@ const Login = (props) => {
     axios
       .get("https://back-end-pp06.herokuapp.com/api/users")
       .then((res) => {
-        console.log("login", res);
+        // fake login
+        const user = res.data.filter((user) => {
+          return (
+            user.username === formValues.username &&
+            user.password === formValues.password
+          );
+        });
+        localStorage.setItem("token", user[0].updated_at);
+        props.history.push("/events");
       })
       .catch((err) => {
         console.log(err);
