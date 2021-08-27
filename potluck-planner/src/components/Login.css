@@ -1,8 +1,25 @@
-.loginSection {
-  display: flex;
-  flex-direction: column;
-}
-
 .form {
   align-content: center;
+  background-color: #fec872;
+  padding: 1rem 1rem;
+  border: 6px solid #fca311;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.form input {
+  width: 50%;
+  margin: 0.5rem;
+  padding: 0.5rem 0.5rem;
+}
+.loginSection {
+  padding: 3rem 3rem;
+}
+
+.label {
+  background-color: #fca311;
+  border-radius: 2rem;
 }
