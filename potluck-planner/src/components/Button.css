@@ -12,8 +12,8 @@
 }
 
 .button:hover {
-  background-color: #fca311;
-  color: #14213d;
+  background-color: #14213d;
+  color: #fca311;
   transform: scale(1.02);
   cursor: pointer;
   transition: transform 200ms ease-in;

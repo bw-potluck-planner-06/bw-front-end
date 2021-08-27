@@ -1,5 +1,8 @@
+import "./Login.css";
+
 import React, { useState } from "react";
 
+import ButtonLogin from "./Button";
 import { addPotluck } from "../actions";
 import { connect } from "react-redux";
 
@@ -37,56 +40,48 @@ const NewPotluck = ({
   };
 
   return (
-    <div>
+    <div className="loginSection">
       <label>
-        New Potluck
-        <form onSubmit={handleSubmit} className="potluckForm">
-          <label>
-            TITLE:
-            <input
-              name="title"
-              type="text"
-              value={formValues.title}
-              onChange={handleChanges}
-            />
-          </label>
-          <label>
-            IMAGE:
-            <input
-              name="img"
-              type="text"
-              value={formValues.img}
-              onChange={handleChanges}
-            />
-          </label>
-          <label>
-            DATE:
-            <input
-              name="date"
-              type="text"
-              value={formValues.date}
-              onChange={handleChanges}
-            />
-          </label>
-          <label>
-            LOCATION:
-            <input
-              name="location"
-              type="text"
-              value={formValues.location}
-              onChange={handleChanges}
-            />
-          </label>
-          <label>
-            DESCRIPTION:
-            <input
-              name="description"
-              type="text"
-              value={formValues.description}
-              onChange={handleChanges}
-            />
-          </label>
-          <button type="submit">Submit</button>
+        <form onSubmit={handleSubmit} className="form">
+          New Potluck
+          <input
+            name="title"
+            type="text"
+            value={formValues.title}
+            onChange={handleChanges}
+            placeholder="TITLE"
+          />
+          <input
+            name="img"
+            type="text"
+            value={formValues.img}
+            onChange={handleChanges}
+            placeholder="IMAGE"
+          />
+          <input
+            name="date"
+            type="text"
+            value={formValues.date}
+            onChange={handleChanges}
+            placeholder="DATE"
+          />
+          <input
+            name="location"
+            type="text"
+            value={formValues.location}
+            onChange={handleChanges}
+            placeholder="LOCATION"
+          />
+          <input
+            name="description"
+            type="text"
+            value={formValues.description}
+            onChange={handleChanges}
+            placeholder="DESCRIPTION"
+          />
+          <button type="submit" class="button">
+            Submit
+          </button>
         </form>
       </label>
     </div>

@@ -73,7 +73,8 @@ body {
 }
 
 .potluckBtn {
-  margin-top: 13.5rem;
+  margin-top: 12.5rem;
+  margin-right: 1rem;
   width: 15%;
   height: 7vh;
   background-color: #e5e5e5;
@@ -86,13 +87,20 @@ body {
 
 .selectedPotluck {
   margin: 2rem 1rem;
+  border-radius: 0.5rem;
   background-color: #fec872;
+  border: 6px solid #fca311;
+}
+
+.selectedPotluck button {
+  margin: 4rem;
 }
 
 .selectedTextContent {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  margin: 5rem;
+  height: 50vh;
 }
 
 .potluckForm button {
